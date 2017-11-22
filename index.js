@@ -1,11 +1,10 @@
 function produceDrivingRange(range){
   return function(firstBlock, secondBlock){
-    let blockDiff = secondBlock - firstBlock;
-    let rangeDiff = range - blockDiff;
+    let blockDiff = Math.abs(parseInt(secondBlock) - parseInt(firstBlock));
     if (blockDiff < range){
-      return `within range by ${rangeDiff}`
+      return `within range by ${range - blockDiff}`
     } else {
-      return `${rangeDiff} blocks out of range`
+      return `${blockDiff - range} blocks out of range`
     }
   }
 }
