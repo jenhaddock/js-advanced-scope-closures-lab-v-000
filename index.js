@@ -1,5 +1,5 @@
-function produceDrivingRange(firstBlock, secondBlock){
-  return function(range){
+function produceDrivingRange(range){
+  return function(firstBlock, secondBlock){
     let blockDiff = secondBlock - firstBlock;
     let rangeDiff = range - blockDiff;
     if (blockDiff < range){
